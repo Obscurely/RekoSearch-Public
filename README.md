@@ -35,7 +35,7 @@
         <li><a href="#-built-with">🍔 Built with</a></li>
       </ul>
     </li>
-    <li><a href="#-architecture-diagrams">🏗️ Architecture Diagrams</a></li>
+    <li><a href="#%EF%B8%8F-architecture-diagrams">🏗️ Architecture Diagrams</a></li>
     <li><a href="#-contributing">💁 Contributing</a></li>
     <li><a href="#faq">❓ FAQ</a></li>
     <li><a href="#-security">🔰 Security</a></li>
