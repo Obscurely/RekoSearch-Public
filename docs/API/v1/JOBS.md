@@ -260,5 +260,5 @@ curl -X DELETE \
 
 ## Additional Resources
 
+- [Application Documentation](../Application/README.md)
 - [Infrastructure Documentation](../../Infrastructure/README.md)
-- [Logic Documentation](../../Logic/README.md)

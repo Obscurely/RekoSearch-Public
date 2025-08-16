@@ -63,5 +63,5 @@ The API request flow follows this path:
 
 ## Additional Resources
 
+- [Application Documentation](../Application/README.md)
 - [Infrastructure Documentation](../Infrastructure/README.md)
-- [Logic Documentation](../Logic/README.md)
