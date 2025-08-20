@@ -55,7 +55,8 @@ is as follows:
 ## Infrastructure
 
 - The API, CDN, DNS Router, and other components that software interacts with are from AWS (Amazon Web Services). It includes AWS Lambda functions called by the API, too. A non-exhaustive list of the most used services consists of the following: Route53, CloudFront, API Gateway, AWS Lambda, S3, SQS, AWS Cognito, DynamoDB, SES, Event Bridge, CloudWatch, AWS Rekognition, AWS Textract, AWS Transcribe, IAM and ACM.
-- The actual applications (Frontend (made of React, Python, and Flask), Job Processor (Rust), Queue Processor (Rust), Stats Dashboard (Grafana), and Analytics Dashboard (Umami)) are deployed in a Kubernetes cluster behind an NGINX reverse proxy as deployments and jobs.
+- The actual applications (Frontend (made of React, Python, and Flask), Queue Processor (Rust), Stats Dashboard (Grafana), and Analytics Dashboard (Umami)) are deployed in a Kubernetes cluster behind an NGINX reverse proxy as deployments and jobs.
+- The Job Processor (Rust) is created by the queue processor on ecs fargate as a task whenever a new job is added to the queue thus making the job processing infinitely scalable.
 
 ## Additional Resources
 

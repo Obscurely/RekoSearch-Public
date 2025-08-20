@@ -12,7 +12,7 @@ This section comprises three components:
 
 ## MAIN Steps
 
-1. The Queue Processor pools for 30 seconds at a time the SQS Queue for any new jobs to be processed. Once it finds a job, it creates a new Kubernetes Job which spins up the Job Processor.
+1. The Queue Processor pools for 30 seconds at a time the SQS Queue for any new jobs to be processed. Once it finds a job, it creates a new ECS Fargate task which spins up the Job Processor.
 1. Next, it retrieves the job item from the Job Requests database, updates the status to "processing," and sends an email to the user if they have opted in, indicating that processing has begun. It then retrieves a list of all job files from S3.
 1. It spins up a background task that updates the processing status every 10 seconds, providing the user with frontend updates.
 1. It takes all files and, in parallel (e.g, five at once), runs the FILE PROCESSOR on them, storing which files have succeeded the processing and which have failed.

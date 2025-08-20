@@ -43,6 +43,10 @@ The reasons for not using a REST API are cost-related, as running the bare bones
 
 All of the API Routes resolve to AWS Lambda or ARM, as it is incredibly cheap to run and is more than enough for any of the APIs.
 
+#### Job Processor
+
+The Job Processor is a Rust application that is ran on ECS Fargate as a task whenever a new job is added to the queue. This allows for infinite scalability, as it can run as many tasks as needed to process the jobs in parallel.
+
 #### Other
 
 - S3 for storing files and accessing them fast.
@@ -57,6 +61,6 @@ All of the API Routes resolve to AWS Lambda or ARM, as it is incredibly cheap to
 
 ## Kubernetes
 
-For hosting the Frontend, Job Processor, Queue Processor, Stats Dashboard, and Analytics Dashboard, I have decided to go with a Kubernetes cluster because I am very comfortable with Kubernetes (I even have the CKAD), it's cloud agnostic if I ever decide to switch things. It allows me to manage them better.
+For hosting the Frontend, Queue Processor, Stats Dashboard, and Analytics Dashboard, I have decided to go with a Kubernetes cluster because I am very comfortable with Kubernetes (I even have the CKAD), it's cloud agnostic if I ever decide to switch things. It allows me to manage them better.
 
 See [K3S.md](./K3S.md) for more information about the K3S cluster.
