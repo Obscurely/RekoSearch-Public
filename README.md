@@ -104,6 +104,12 @@ Check out the [demo](https://rekosearch.com/demo) to see how it works in action.
 
 ## 🏗️ Architecture Diagrams
 
+**IMPORTANT NOTE**:
+
+- What is below referred to as the **FRONTEND** includes **ONLY** the **DASHBOARD**.
+- The **HOMEPAGE** is a statically exported (**prerendered**) **Next.js website hosted on S3** behind CloudFront. (using the same technologies as the Dashboard: React, MUI, etc.)
+- What this means is that the **homepage is very inexpensive to run** and infinitely scalable, at a cost that is easy to bear, while the **dashboard**, which costs more to run, **will be paid for by the users**.
+
 ### High-Level Overview
 
 ![High Overview Diagram](assets/diagrams/high_overview.png)
@@ -140,7 +146,7 @@ Structure of job-related API endpoints for listing jobs, retrieving job details,
 
 Infrastructure diagram showing the K3s Kubernetes cluster deployment on AWS with load balancers, auto-scaling, and CloudFront integration. [View detailed documentation](docs/Application/K3S.md)
 
-NOTE: Currently using Digital Ocean K8s cluster for free trial and to slowly integrate the K3s cluster in. Making sure the launch is smooth and without issues.
+NOTE: Currently using Digital Ocean K8s cluster to slowly integrate the K3s cluster in. Making sure the launch is smooth and without issues. Might actually stick with DO K8s cluster for some time as at the current scale it's cheaper and easier to manage. K3s cluster will get cheaper, but at a higher scale.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
